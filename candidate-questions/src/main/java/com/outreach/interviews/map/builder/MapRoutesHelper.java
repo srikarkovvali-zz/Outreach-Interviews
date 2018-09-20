@@ -34,26 +34,51 @@ public class MapRoutesHelper
 		private final String URL = "https://maps.googleapis.com/maps/api/";
 		private CloseableHttpClient httpclient = HttpClients.createDefault();
 		
+		/**
+		 * Set the starting point
+		 * @param origin String representing the starting point
+		 * @return {@link RoutesBuilder}
+		 */
 		public RoutesBuilder setOrigin(String origin)  {
 			this.origin = origin;
 			return this;
 		}
-
+		
+		/**
+		 * Set the destination point
+		 * @param origin String representing the destination point
+		 * @return {@link RoutesBuilder}
+		 */
 		public RoutesBuilder setDestination(String destination) {
 			this.destination = destination;
 			return this;
 		}
-
+		
+		/**
+		 * Set the region {@link MapRegions}
+		 * @param region Allows for en, es
+		 * @return {@link RoutesBuilder}
+		 */
 		public RoutesBuilder setRegion(MapRegions region) {
 			this.region = region;
 			return this;
 		}
 		
+		/**
+		 * Set the region {@link MapModes}
+		 * @param region Allows for walking, driving, transit, biking
+		 * @return {@link RoutesBuilder}
+		 */
 		public RoutesBuilder setMapMode(MapModes mode) {
 			this.mode = mode;
 			return this;
 		}
-
+		
+		/**
+		 * Create the URL to communicate with the Google Maps API
+		 * @param type URL to provide to Apache HttpClient
+		 * @return {@link RoutesBuilder}
+		 */
 		public RoutesBuilder setURL(MapOperations type) {
 			if(type.equals(MapOperations.geocode))
 				throw new UnsupportedOperationException();
@@ -63,14 +88,13 @@ public class MapRoutesHelper
 
 		}
 		
-		private final String getURL() {
-			return this.URL + this.operation.name() + "/json?";
-		}
-
-		private final String getAPIKey() {
-			return "AIzaSyCm7Ch5uGRBIrsUkSHNBN8-W-dV7thmjXU";
-		}
-
+		/**
+		 * Perform the HTTP request and retrieve the data from the HttpClient object
+		 * @return {@link RoutesBuilder}  
+		 * @throws UnsupportedOperationException
+		 * @throws IOException
+		 * @throws IllegalArgumentException
+		 */
 		public RoutesBuilder build() throws UnsupportedOperationException, IOException, IllegalArgumentException {
 			String requestURL = this.getURL()  	+ "&origin=" + getOrigin() 
 												+ "&destination=" + getDestination()
@@ -97,6 +121,10 @@ public class MapRoutesHelper
 			return this;
 		}
 		
+		/**
+		 * Retrieve the steps required to get from the source to the destination
+		 * @return List of String containing the steps to get to the destination
+		 */
 		public List<String> getDirections() {
 			if(this.operation.equals(MapOperations.directions)) {
 				List<String> list = new ArrayList<String>();
@@ -113,6 +141,16 @@ public class MapRoutesHelper
 			} else {
 				throw new IllegalArgumentException("Does not support " + MapOperations.geocode.name());
 			}
+		}
+		
+
+		//*************************For Internal Use Only***********************************//
+		private final String getURL() {
+			return this.URL + this.operation.name() + "/json?";
+		}
+
+		private final String getAPIKey() {
+			return "AIzaSyCm7Ch5uGRBIrsUkSHNBN8-W-dV7thmjXU";
 		}
 		
 		private final String getOrigin() {

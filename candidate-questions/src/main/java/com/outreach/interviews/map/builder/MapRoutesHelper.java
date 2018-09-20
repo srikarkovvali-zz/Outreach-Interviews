@@ -46,7 +46,7 @@ public class MapRoutesHelper
 		
 		/**
 		 * Set the destination point
-		 * @param origin String representing the destination point
+		 * @param destination String representing the destination point
 		 * @return {@link RoutesBuilder}
 		 */
 		public RoutesBuilder setDestination(String destination) {
@@ -66,7 +66,7 @@ public class MapRoutesHelper
 		
 		/**
 		 * Set the region {@link MapModes}
-		 * @param region Allows for walking, driving, transit, biking
+		 * @param mode Allows for walking, driving, transit, biking
 		 * @return {@link RoutesBuilder}
 		 */
 		public RoutesBuilder setMapMode(MapModes mode) {

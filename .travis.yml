@@ -1,0 +1,30 @@
+#safelist
+branches:
+  only:
+      - master
+      - develop
+sudo : false
+language: java
+addons:
+    apt:
+        packages:
+          - openjdk-8-jdk
+cache:
+    directories:
+        - $HOME/.m2
+jobs: 
+  include: 
+    - stage: compile
+      before_script:
+        - cd candidate-questions
+      script:
+        - mvn clean install
+
+stages: 
+        - compile
+
+notifications:
+        slack: outreach-uottawa:VO2Yf1Vx0aCVpwGEqTx3tRjd
+        email:
+            recipients:
+                - patrique.legault@uottawa.ca

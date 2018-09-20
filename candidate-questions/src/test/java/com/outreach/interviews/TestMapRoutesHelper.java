@@ -38,7 +38,6 @@ public class TestMapRoutesHelper
 		
 		assertNotNull(steps);
 		assertTrue(steps.size() > 5);
-		steps.forEach(System.out::println);
 	}
 	
 	@Test(expected = java.lang.UnsupportedOperationException.class)
@@ -78,7 +77,6 @@ public class TestMapRoutesHelper
 			.getDirections();
 		
 		assertNotNull(steps);
-		steps.forEach(System.out::println);
 	}
 	
 }

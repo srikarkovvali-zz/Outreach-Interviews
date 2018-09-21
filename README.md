@@ -1,6 +1,12 @@
 # Outreach-Interviews
 Interview questions for COOP, Capstone and employees
 
+Master Build
+[![Build Status](https://travis-ci.com/AES-Outreach/Outreach-Interviews.svg?token=Q2Kk8fYfCWzCrC5pSjcD&branch=master)](https://travis-ci.com/AES-Outreach/Outreach-Interviews)
+
+Develop Build
+[![Build Status](https://travis-ci.com/AES-Outreach/Outreach-Interviews.svg?token=Q2Kk8fYfCWzCrC5pSjcD&branch=develop)](https://travis-ci.com/AES-Outreach/Outreach-Interviews)
+
 # How to Build
  Simply clone the repo and navigate within the `candidate-questions` and execute the following command:
 

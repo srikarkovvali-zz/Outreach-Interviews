@@ -126,7 +126,7 @@ public class MapRoutesHelper
 		 * @return List of String containing the steps to get to the destination
 		 */
 		public List<String> getDirections() {
-			if(this.operation.equals(MapOperations.directions)) {
+			if(this.operation.equals(MapOperations.directions) && zeroResults(this.result)) {
 				List<String> list = new ArrayList<String>();
 				JsonArray steps = this.result.get("routes").getAsJsonArray().get(0).getAsJsonObject()
 					.get("legs").getAsJsonArray().get(0).getAsJsonObject()
@@ -180,6 +180,10 @@ public class MapRoutesHelper
 				throw new IllegalArgumentException("Region cannot be empty");
 			
 			return this.region.name();
+		}
+		
+		private final boolean zeroResults(JsonObject obj) {
+			return !obj.get("status").getAsString().equals("ZERO_RESULTS");
 		}
 
 	}

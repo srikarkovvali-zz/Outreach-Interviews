@@ -65,7 +65,7 @@ public class TestMapRoutesHelper
 		assertNotNull(steps);
 	}
 	
-	@Test(expected = java.lang.IllegalArgumentException.class)
+	@Test
 	public void testMapRoutesHelperApiKey5() throws UnsupportedOperationException, IOException {
 		List<String> steps = new MapRoutesHelper.RoutesBuilder()
 			.setOrigin("Sudbury")

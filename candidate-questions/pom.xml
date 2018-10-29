@@ -10,6 +10,32 @@
 	<url>http://maven.apache.org</url>
 
 	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Maven Surefire Plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.22.0</version>
+					<configuration>
+						<argLine>
+							--illegal-access=permit
+						</argLine>
+					</configuration>
+				</plugin>
+				<!-- Maven Failsafe Plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>2.22.0</version>
+					<configuration>
+						<argLine>
+							--illegal-access=permit
+						</argLine>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -38,33 +64,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<pluginManagement>
-		<plugins>
-			<!-- Maven Surefire Plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.0</version>
-				<configuration>
-					<argLine>
-						--illegal-access=permit
-					</argLine>
-				</configuration>
-			</plugin>
-			<!-- Maven Failsafe Plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.22.0</version>
-				<configuration>
-					<argLine>
-						--illegal-access=permit
-					</argLine>
-				</configuration>
-			</plugin>
-		</plugins>
-	</pluginManagement>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->

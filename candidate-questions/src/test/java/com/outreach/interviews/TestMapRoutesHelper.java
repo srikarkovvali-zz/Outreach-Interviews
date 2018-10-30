@@ -72,7 +72,6 @@ public class TestMapRoutesHelper
 			.setDestination("Ottawa")
 			.setRegion(MapRegions.en)
 			.setURL(MapOperations.directions)
-			.setMapMode(MapModes.transit)
 			.build()
 			.getDirections();
 		

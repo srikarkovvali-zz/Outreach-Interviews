@@ -9,7 +9,6 @@ import java.util.List;
 import org.junit.Test;
 
 import com.outreach.interviews.map.builder.MapRoutesHelper;
-import com.outreach.interviews.map.enums.MapModes;
 import com.outreach.interviews.map.enums.MapOperations;
 import com.outreach.interviews.map.enums.MapRegions;
 

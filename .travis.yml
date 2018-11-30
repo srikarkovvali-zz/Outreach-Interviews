@@ -21,7 +21,6 @@ jobs:
 
 stages: 
         - compile
-
 notifications:
         slack: outreach-uottawa:VO2Yf1Vx0aCVpwGEqTx3tRjd
         email:

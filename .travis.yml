@@ -17,8 +17,7 @@ jobs:
         - cd candidate-questions
       script:
         - mvn clean install
-        - mvn javadoc:javadoc
-
+        - mvn clean javadoc:javadoc
 stages: 
         - compile
 notifications:

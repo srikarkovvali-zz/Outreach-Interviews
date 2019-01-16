@@ -91,9 +91,9 @@ public class MapRoutesHelper
 		/**
 		 * Perform the HTTP request and retrieve the data from the HttpClient object
 		 * @return {@link RoutesBuilder}  
-		 * @throws UnsupportedOperationException
-		 * @throws IOException
-		 * @throws IllegalArgumentException
+		 * @throws UnsupportedOperationException Thrown to indicate that the requested operation is not supported.
+		 * @throws IOException Thrown to indicate that the requested operation is not supported.
+		 * @throws IllegalArgumentException Thrown to indicate that a method has been passed an illegal orinappropriate argument.
 		 */
 		public RoutesBuilder build() throws UnsupportedOperationException, IOException, IllegalArgumentException {
 			String requestURL = this.getURL()  	+ "&origin=" + getOrigin() 

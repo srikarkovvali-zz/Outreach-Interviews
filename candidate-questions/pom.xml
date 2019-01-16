@@ -42,6 +42,7 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.0.1</version>
 				<configuration>
+					<detectJavaApiLink>false</detectJavaApiLink>
 					<failOnError>true</failOnError>
 					<reportOutputDirectory>${project.basedir}/apidocs</reportOutputDirectory>
 					<doclint>all</doclint>

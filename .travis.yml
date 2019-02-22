@@ -19,14 +19,14 @@ jobs:
         - mvn clean javadoc:javadoc
     - stage: compile_documenter
       before_script:
-        - cd ../documentation-questions
+        - cd documentation-questions
       script:
         - mvn clean install
 stages: 
   - compile_developer
   - compile_documenter
 notifications:
-        slack: outreach-uottawa:VO2Yf1Vx0aCVpwGEqTx3tRjd
-        email:
-            recipients:
-                - patrique.legault@uottawa.ca
+  slack: outreach-uottawa:VO2Yf1Vx0aCVpwGEqTx3tRjd
+  email:
+      recipients:
+          - patrique.legault@uottawa.ca

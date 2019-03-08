@@ -12,7 +12,7 @@ cache:
 jobs: 
   include:
     - script:
-        - cd candidate-questions && mvn clean install
+        - cd candidate-questions && mvn clean install && cd ..
         - cd documentation-questions && mvn clean install
 stages: 
   - test

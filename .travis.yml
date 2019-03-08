@@ -1,32 +1,23 @@
 #safelist
 branches:
   only:
-      - master
-      - develop
+    - master
+    - develop
 language: java
 jdk:
   - openjdk11
 cache:
-    directories:
-        - $HOME/.m2
+  directories:
+      - $HOME/.m2
 jobs: 
-  include: 
-    - stage: compile_developer
-      before_script:
-        - cd candidate-questions
-      script:
-        - mvn clean install
-        - mvn clean javadoc:javadoc
-    - stage: compile_documenter
-      before_script:
-        - cd documentation-questions
-      script:
-        - mvn clean install
+  include:
+    - script:
+        - cd candidate-questions && mvn clean install
+        - cd documentation-questions && mvn clean install
 stages: 
-  - compile_developer
-  - compile_documenter
+  - test
 notifications:
   slack: outreach-uottawa:VO2Yf1Vx0aCVpwGEqTx3tRjd
   email:
-      recipients:
-          - patrique.legault@uottawa.ca
+    recipients:
+        - patrique.legault@uottawa.ca

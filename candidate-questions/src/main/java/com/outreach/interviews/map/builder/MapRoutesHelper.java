@@ -150,7 +150,7 @@ public class MapRoutesHelper
 		}
 
 		private final String getAPIKey() {
-			return "AIzaSyBdPbwaw_1gJEkBH0_aUqT5IPHPONwA62I";
+			return System.getenv("outreach_maps_key");
 		}
 		
 		private final String getOrigin() {

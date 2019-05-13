@@ -150,7 +150,7 @@ public class MapRoutesHelper
 		}
 
 		private final String getAPIKey() {
-			return "AIzaSyBnpzPgOwH94m-pXAtLY-HV46w3ipU49fU";
+			return "AIzaSyBdPbwaw_1gJEkBH0_aUqT5IPHPONwA62I";
 		}
 		
 		private final String getOrigin() {

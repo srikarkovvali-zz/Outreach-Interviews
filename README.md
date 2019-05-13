@@ -10,6 +10,13 @@ Develop Build
 [![Build Status](https://travis-ci.com/AES-Outreach/Outreach-Interviews.svg?token=Q2Kk8fYfCWzCrC5pSjcD&branch=develop)](https://travis-ci.com/AES-Outreach/Outreach-Interviews)
 
 # How to Build
+ Create an environment variable on your operating system called `outreach_maps_key`. The value for the key will be the Google Maps API token which will be provided to you prior to the interview.
+
+ If you are uncertain of creating environment variables for your operating system please read the correct article for your operating system:
+ 1. [Linux OS](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps)
+ 2. [Mac OSX](https://medium.com/@himanshuagarwal1395/setting-up-environment-variables-in-macos-sierra-f5978369b255)
+ 3. [Windows OS](https://helpdeskgeek.com/how-to/create-custom-environment-variables-in-windows/)
+
  Simply clone the repo and navigate within the `candidate-questions` and execute the following command:
 
  `mvn clean install`

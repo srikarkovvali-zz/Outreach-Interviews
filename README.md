@@ -35,6 +35,12 @@ Develop Build
 
  `mvn test`
 
+ # How to Pull Request
+
+ In order to pull request the project results into the repository you must `Fork` the repository into your own Github account. Once the project has been forked then simply make the necessary changes to the project. Once complete create a pull request with the changes so that the owner of the project can review the necessary changes.
+
+ Source: [Github Documentation](https://help.github.com/en/articles/fork-a-repo)
+
  # Contributions
 
 - [Patrique Legault](mailto:patrique.legault@uottawa.ca)

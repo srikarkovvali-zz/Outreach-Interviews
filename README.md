@@ -10,7 +10,7 @@ Develop Build
 [![Build Status](https://travis-ci.com/AES-Outreach/Outreach-Interviews.svg?token=Q2Kk8fYfCWzCrC5pSjcD&branch=develop)](https://travis-ci.com/AES-Outreach/Outreach-Interviews)
 
 # How to Build
- Create an environment variable on your operating system called `outreach_maps_key`. The value for the key will be the Google Maps API token which will be provided to you prior to the interview.
+ Create an environment variable on your operating system called `OUTREACH_MAPS_KEY`. The value for the key will be the Google Maps API token which will be provided to you prior to the interview.
 
  If you are uncertain of creating environment variables for your operating system please read the correct article for your operating system:
  1. [Linux OS](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps)

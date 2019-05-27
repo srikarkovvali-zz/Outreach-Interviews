@@ -9,6 +9,15 @@ Develop Build
 
 [![Build Status](https://travis-ci.com/AES-Outreach/Outreach-Interviews.svg?token=Q2Kk8fYfCWzCrC5pSjcD&branch=develop)](https://travis-ci.com/AES-Outreach/Outreach-Interviews)
 
+# Recommended Tools
+
+In order to build the project successfully and with the least amount of errors users should have the following installed on their work stations.
+
+1. Eclipse or Visual Studio Code
+2. Maven 3.x.y where y >=0 and x >= 5
+3. Java 11
+4. Understanding of Maven and HTTP requests
+
 # How to Build
  Create an environment variable on your operating system called `OUTREACH_MAPS_KEY`. The value for the key will be the Google Maps API token which will be provided to you prior to the interview.
 

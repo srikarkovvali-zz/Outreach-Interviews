@@ -21,7 +21,7 @@ Develop Build
 
  `mvn clean install`
 
- # Purpose
+ # Purpose (Creating API key only)
 
  The purpose of this repo is to provide students with a sample project that they can then use in order to interact with Google Maps.
 

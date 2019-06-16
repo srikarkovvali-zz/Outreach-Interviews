@@ -12,8 +12,8 @@ cache:
 jobs:
   include:
   - script:
-    - cd candidate-questions/server-questions && mvn clean install && cd ..
-    - cd documentation-questions && mvn clean install
+    - cd $HOME/build/AES-Outreach/Outreach-Interviews/candidate-questions/server-questions && mvn clean install
+    - cd $HOME/build/AES-Outreach/Outreach-Interviews/documentation-questions && mvn clean install
 stages:
 - test
 notifications:

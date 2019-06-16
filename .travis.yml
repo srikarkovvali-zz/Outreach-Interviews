@@ -3,7 +3,7 @@ branches:
   only:
   - master
   - develop
-language: java
+language: node_js
 jdk:
 - openjdk11
 node_js: '10'

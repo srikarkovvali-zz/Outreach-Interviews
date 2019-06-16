@@ -6,13 +6,19 @@ branches:
 language: java
 jdk:
 - openjdk11
+node_js: '10'
 cache:
   directories:
   - "$HOME/.m2"
+  - node_modules
 jobs:
   include:
   - script:
     - cd $HOME/build/AES-Outreach/Outreach-Interviews/candidate-questions/server-questions && mvn clean install
+    - cd $HOME/build/AES-Outreach/Outreach-Interviews/candidate-questions/client-questions && npm install \
+      && npm run lint \
+      && npm run test \
+      && npm run build
     - cd $HOME/build/AES-Outreach/Outreach-Interviews/documentation-questions && mvn clean install
 stages:
 - test

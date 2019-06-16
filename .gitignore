@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
 
+dist/
+node_modules/
+.env
+
 # Log file
 *.log
 

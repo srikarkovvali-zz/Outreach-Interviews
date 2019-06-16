@@ -1,0 +1,51 @@
+{
+  "name": "client-questions",
+  "version": "1.0.0",
+  "description": "A NodeJS project used to interview candidates for Outreach developers ",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "lint": "tslint src/**/*.ts",
+    "prestart": "npm run build",
+    "start": "node .",
+    "test": "jasmine-ts --config=jasmine.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AES-Outreach/Outreach-Interviews.git"
+  },
+  "keywords": [
+    "nodejs",
+    "npm",
+    "typescript",
+    "uottawa",
+    "outreach",
+    "developer"
+  ],
+  "author": "Patrique Legault",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AES-Outreach/Outreach-Interviews/issues"
+  },
+  "homepage": "https://github.com/AES-Outreach/Outreach-Interviews#readme",
+  "dependencies": {
+    "@google-cloud/translate": "^4.1.0",
+    "@types/dotenv": "^6.1.1",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/jasmine": "^3.3.13",
+    "@types/node": "^12.0.8",
+    "jasmine": "^3.4.0",
+    "jasmine-ts": "^0.3.0",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.2"
+  }
+}

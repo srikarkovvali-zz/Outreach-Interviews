@@ -9,7 +9,11 @@ Develop Build
 
 [![Build Status](https://travis-ci.com/AES-Outreach/Outreach-Interviews.svg?token=Q2Kk8fYfCWzCrC5pSjcD&branch=develop)](https://travis-ci.com/AES-Outreach/Outreach-Interviews)
 
-# Recommended Tools
+# Server Questions
+
+Steps required to build and test the server questions project
+
+## Recommended Tools
 
 In order to build the project successfully and with the least amount of errors users should have the following installed on their work stations.
 
@@ -18,7 +22,7 @@ In order to build the project successfully and with the least amount of errors u
 3. Java 11
 4. Understanding of Maven and HTTP requests
 
-# How to Build
+## How to Build
  Create an environment variable on your operating system called `OUTREACH_MAPS_KEY`. The value for the key will be the Google Maps API token which will be provided to you prior to the interview.
 
  If you are uncertain of creating environment variables for your operating system please read the correct article for your operating system:
@@ -30,15 +34,7 @@ In order to build the project successfully and with the least amount of errors u
 
  `mvn clean install`
 
- # Creating API Key
-
- The purpose of this repo is to provide students with a sample project that they can then use in order to interact with Google Maps.
-
- In order to create an API key log in with `Patrique's` GMAIL profile and create a new API key. 
-
- The URL to do so is here: `https://console.developers.google.com/apis/credentials?project=outreach-v2-1528904629755&authuser=0`
-
- # How to Test
+ ## How to Test
 
  Simply clone the repo and navigate within the `candidate-questions` and execute the following command:
 

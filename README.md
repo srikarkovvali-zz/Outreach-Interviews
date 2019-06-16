@@ -36,9 +36,43 @@ In order to build the project successfully and with the least amount of errors u
 
  ## How to Test
 
- Simply clone the repo and navigate within the `candidate-questions` and execute the following command:
+ Simply clone the repo and navigate within the `candidate-questions/server-questions` and execute the following command:
 
  `mvn test`
+
+ # Client Questions
+
+Steps required to build and test the server questions project
+
+## Recommended Tools
+
+In order to build the project successfully and with the least amount of errors users should have the following installed on their work stations.
+
+1. Visual Studio Code
+2. NodeJS 10.x, x > 10
+3. NPM
+4. Understanding of NPM and HTTP requests
+
+ ## How to Start the Application
+ Rename the `.env.template` file to `.env` and add the API key that was given to you to this file.
+
+ Once complete run 
+ 1. `npm install`
+ 2. `npm run start`
+
+ ## How to Build
+ Rename the `.env.template` file to `.env` and add the API key that was given to you to this file.
+
+ Once complete run the following:
+ 1. `npm install`
+ 2. `npm run build`
+
+ ## How to Test
+
+ Simply clone the repo and navigate within the `candidate-questions/client-questions` and execute the following command:
+
+ 1. `npm install` 
+ 2. `npm run test`
 
  # How to Pull Request
 

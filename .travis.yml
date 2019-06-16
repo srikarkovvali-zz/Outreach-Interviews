@@ -17,8 +17,8 @@ jobs:
     - cd $HOME/build/AES-Outreach/Outreach-Interviews/candidate-questions/server-questions && mvn clean install
     - cd $HOME/build/AES-Outreach/Outreach-Interviews/candidate-questions/client-questions && npm install
       && npm run lint
-      && npm run test
       && npm run build
+      && npm run test
     - cd $HOME/build/AES-Outreach/Outreach-Interviews/documentation-questions && mvn clean install
 stages:
 - test
